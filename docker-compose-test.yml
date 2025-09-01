@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  ai_assistant_tests:
+    build:
+      context: backend/ai_assistant_service
+      dockerfile: Dockerfile
+    command: pytest -v --disable-warnings
+    volumes:
+      - ./backend:/app/backend
+    working_dir: /app/backend/ai_assistant_service
+    environment:
+      - PYTHONPATH=/app/backend
+    env_file:
+      - backend/ai_assistant_service/.env
+
+  ingestor_service_tests:
+    build:
+      context: backend/ingestor_service
+      dockerfile: Dockerfile
+    command: pytest -v --disable-warnings
+    volumes:
+      - ./backend:/app/backend
+    working_dir: /app/backend/ingestor_service
+    environment:
+      - PYTHONPATH=/app/backend
+    env_file:
+      - backend/ingestor_service/.env
+
+  embedding_service_tests:
+    build:
+      context: backend/embedding_service
+      dockerfile: Dockerfile
+    command: pytest -v --disable-warnings
+    volumes:
+      - ./backend:/app/backend
+    working_dir: /app/backend/embedding_service
+    environment:
+      - PYTHONPATH=/app/backend
+    env_file:
+      - backend/embedding_service/.env
+
+  qdrant_service_tests:
+    build:
+      context: backend/qdrant_service
+      dockerfile: Dockerfile
+    command: pytest -v --disable-warnings
+    volumes:
+      - ./backend:/app/backend
+    working_dir: /app/backend/qdrant_service
+    environment:
+      - PYTHONPATH=/app/backend
+    env_file:
+      - backend/qdrant_service/.env

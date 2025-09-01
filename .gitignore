@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Virtual environments
+.env
+.venv
+venv/
+ENV/
+
+# Environment variables
+*.env
+.env.*
+
+# Byte-compiled / optimized files
+*.pyc
+*.pyo
+*.pyd
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+.cache
+pytest_cache/
+
+# MyPy cache
+.mypy_cache/
+
+# PyCharm / VSCode
+.idea/
+.vscode/
+
+# Docker
+*.pid

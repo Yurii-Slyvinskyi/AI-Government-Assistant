@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+*.env
+.env.*
+!example.env  # keep example env if you have one
+
+# Git & docs
+.git
+.gitignore
+README.md
+
+# Tests & dev configs
+tests/
+.vscode/
+.idea/
+*.log
+
+# Cache & temporary files
+.mypy_cache/
+.pytest_cache/
+.cache/

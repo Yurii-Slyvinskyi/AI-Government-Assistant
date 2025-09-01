@@ -1,0 +1,12 @@
+beautifulsoup4
+requests
+pydantic
+pydantic-settings
+celery
+redis
+httpx
+fastapi
+uvicorn[standard]
+python-dotenv
+pytest
+pytest-asyncio
